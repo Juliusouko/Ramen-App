@@ -3,30 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rate Ramen</title>
   <link rel="stylesheet" href="./style.css">
-  <title>Document</title>
 </head>
 <body>
-  
+  <!--Navbar placholder-->
   <nav class="navbar">
     <h1>Ramen Rater</h1>
   </nav>
+  <br><br>
+  <!--slideshow container-->
+  <div class="slideshow-container">
+    <!--Meal images with captions in ascending order-->
+    <div class="mySlides fade">
+      <div class="numbertext">1/5</div>
+      <img src="./images/gyukotsu.jpg" alt="gyukotsu" width="100%">
+      <div class="text">Gyukotsu</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">2/5</div>
+      <img src="./images/kojiro.jpg" alt="kojiro" width="100%">
+      <div class="text">Kojiro</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">3/5</div>
+      <img src="./images/naruto.jpg" alt="naruto" width="100%">
+      <div class="text">Naruto</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="number-ext">4/5</div>
+      <img src="./images/nirvana.jpg" alt="nirvana" width="100%">
+      <div class="text">Nirvana</div>
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext">5/5</div>
+      <img src="./images/shoyu.jpg" alt="shoyu" width="100%">
+      <div class="text">Shoyu</div>
+    </div>
+    <!--next and previous buttons for the slideshow container-->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
 
-
+  <!--dots/circles for the carousel-->
+  <div style="text-align: center;">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+  </div>
   <form >
     <h1>Add New Ramen</h1>
 
     <label for="name">Name
-      <input type="text" name="name" id="name">
+      <input type="text" name="name" id="name"><br><br>
     </label>
     <label for="restaurant">Restaurant
-      <input type="text" name="restaurant" id="restaurant">
+      <input type="text" name="restaurant" id="restaurant"><br><br>
     </label>
     <label for="image">Image
-      <input type="text" name="image" id="image">
+      <input type="text" name="image" id="image"><br><br>
     </label>
     <label for="rating">Rating
-      <input type="text" name="rating" id="rating">
+      <input type="text" name="rating" id="rating"><br><br>
     </label>
     <label for="comment">
       <textarea name="comment" id="comment"></textarea>
