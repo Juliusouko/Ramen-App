@@ -1,0 +1,13 @@
+* {
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: azure;
+}
+
+.form-input {
+  color:rgb(21, 114, 196);
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  width: 5%;
+}
