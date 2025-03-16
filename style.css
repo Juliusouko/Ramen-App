@@ -172,3 +172,12 @@ form {
   width: 160px;
   border-radius: 10px;
 }
+.rating {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.comment-display {
+  display: flex;
+  justify-content: space-evenly;
+}
