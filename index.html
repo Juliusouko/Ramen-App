@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rate Ramen</title>
   <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
   <!--Navbar placholder-->
   <nav class="navbar">
     <h1>Ramen Rater</h1>
   </nav>
+  <br>
+  <div class="image-flex">
+    <div ><img src="./images/gyukotsu.jpg" alt="gyukotsu"></div>
+    <div><img src="./images/kojiro.jpg" alt="kojiro"></div>
+    <div><img src="./images/naruto.jpg" alt="naruto"></div>
+    <div><img src="./images/nirvana.jpg" alt="nirvana"></div>
+    <div><img src="./images/shoyu.jpg" alt="shoyu"></div>
+  </div>
   <br><br>
   <!--slideshow container-->
   <div class="slideshow-container">
@@ -45,6 +55,9 @@
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
   <br>
+  <div class="rate & comment">
+
+  </div>
 
   <!--dots/circles for the carousel-->
   <div style="text-align: center;">
@@ -54,25 +67,28 @@
     <span class="dot" onclick="currentSlide(4)"></span>
     <span class="dot" onclick="currentSlide(5)"></span>
   </div>
-  <form >
+  <form>
     <h1>Add New Ramen</h1>
 
-    <label for="name">Name
-      <input type="text" name="name" id="name"><br><br>
+    <label for="name" class="text-label">Name:
+      <input type="text" name="name" id="name" class="input-text">
     </label>
-    <label for="restaurant">Restaurant
-      <input type="text" name="restaurant" id="restaurant"><br><br>
+    <label for="restaurant" class="text-label">Restaurant:
+      <input type="text" name="restaurant" id="restaurant" class="input-text">
     </label>
-    <label for="image">Image
-      <input type="text" name="image" id="image"><br><br>
+    <label for="image" class="text-label">Image:
+      <input type="text" name="image" id="image" class="input-text">
     </label>
-    <label for="rating">Rating
-      <input type="text" name="rating" id="rating"><br><br>
+    <label for="rating" class="text-label">Rating:
+      <input type="text" name="rating" id="rating" class="input-text">
     </label>
-    <label for="comment">
-      <textarea name="comment" id="comment"></textarea>
+    <label for="comment" class="text-label">Comment:
+      <textarea name="comment" id="comment" class="input-text"></textarea>
+      <!--<input type="text" name="comment" id="comment" class="input-text"> -->
     </label>
+    <button type="submit" class="create">create</button>
   </form>
   <script src="./script.js"></script>
 </body>
+
 </html>
