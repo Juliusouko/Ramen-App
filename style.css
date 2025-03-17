@@ -162,22 +162,44 @@ form {
 }
 
 /* image styles */
-.image-flex {
+.ramen-display {
   display: flex;
   justify-content: space-evenly;
 }
 
-.image-flex > div > img {
+.ramen-display > div > img {
   height: 120px;
   width: 160px;
   border-radius: 10px;
 }
 .rating {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .comment-display {
   display: flex;
   justify-content: space-evenly;
 }
+
+/* add image gallarey that contains name, restaurant, image, rating, comment */
+/* Image gallery styles begin */
+.image {
+  max-width: 500px;
+  min-height: 300px;
+  position: relative;
+  margin: auto;
+  border: 1px solid silver;
+  border-radius: 4px;
+}
+
+.rating-new, .comment {
+  display: flex;
+  justify-content: center;
+}
+
+.restaurant {
+  display: none;
+}
+
+/* Image gallery styles end */ 

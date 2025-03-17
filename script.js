@@ -1,19 +1,24 @@
 const ramens = [
   { id: 1, name: "Shoyu Ramen", restaurant: "Ichiran", image: "shoyu.jpg", rating: 5, comment: "Delicious!" },
   { id: 2, name: "Miso Ramen", restaurant: "Menya", image: "miso.jpg", rating: 4, comment: "Very flavorful!" },
-  { id: 3, name: "Tonkotsu Ramen", restaurant: "Ramen-ya", image: "tonkotsu.jpg" }
+  { id: 3, name: "Tonkotsu Ramen", restaurant: "Ramen-ya", image: "tonkotsu.jpg", rating: 7, comment: "yeah! now this is a meal" }
 ];
 
 //create a diplay ramen function ()
 function displayRamen()  {
   //console.log(ramens.length);
-  let slideShow = document.getElementById("slideshow-container");
-  //console.log(slideShow);
-  slideShow.innerHTML = '';
+  let ramenDetail = document.getElementById("container");
+  ramenDetail.innerHTML = '';
   ramens.forEach((ramen) => (
-    slideShow.innerHTML 
-    += `${ramen.name}`
-  ));
+    ramenDetail.innerHTML 
+    += `<div class="image">
+        <div class="name">${ramen.name}</div>  
+          <div class="restaurant">${ramen.restaurant}</div>
+          ${ramen.image}
+        </div>
+        <div class="rating"><p>${ramen.rating}</p></div>
+        <div class="comment"><p>${ramen.comment}</p></div>`
+  ))
 }
 displayRamen();
 
