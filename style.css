@@ -191,15 +191,36 @@ form {
   margin: auto;
   border: 1px solid silver;
   border-radius: 4px;
+  display: none;
 }
 
+.image > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
 .rating-new, .comment {
   display: flex;
   justify-content: center;
 }
 
-.restaurant {
+.restaurant, .name, .rating, .comment {
   display: none;
+  padding: 10px;
+}
+
+.image:hover .name{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 24px;
+  padding: 20px;
+  text-align: center;
 }
 
 /* Image gallery styles end */ 

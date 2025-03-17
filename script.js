@@ -1,7 +1,10 @@
 const ramens = [
-  { id: 1, name: "Shoyu Ramen", restaurant: "Ichiran", image: "shoyu.jpg", rating: 5, comment: "Delicious!" },
-  { id: 2, name: "Miso Ramen", restaurant: "Menya", image: "miso.jpg", rating: 4, comment: "Very flavorful!" },
-  { id: 3, name: "Tonkotsu Ramen", restaurant: "Ramen-ya", image: "tonkotsu.jpg", rating: 7, comment: "yeah! now this is a meal" }
+  { id: 1, name: "Shoyu Ramen", restaurant: "Quiver-Grills", image: "shoyu.jpg", rating: 5, comment: "uum! this is the food for my life" },
+  { id: 2, name: "Kojiro Ramen", restaurant: "Moringa Kitchen", image: "kojiro.jpg", rating: 4, comment: "Very flavorful aroma in the food!" },
+  { id: 3, name: "Gyukotsu Ramen", restaurant: "Soko-safi village", image: "gyukotsu.jpg", rating: 7, comment: "yeah! now this is a meal" },
+  { id: 4, name: "Nirvana Ramen", restaurant: "KFC", image:
+  "nirvana.jpg", rating: 5, comment: "Delicious!" },
+  { id: 5, name: "naruto", restaurant: "Hongkong", image: "naruto.jpg", rating: 4, comment: "nice food! i am proposing to the chef lady right away." },
 ];
 
 //create a diplay ramen function ()
@@ -14,66 +17,13 @@ function displayRamen()  {
     += `<div class="image">
         <div class="name">${ramen.name}</div>  
           <div class="restaurant">${ramen.restaurant}</div>
-          ${ramen.image}
+          <img src="images/${ramen.image}" alt="${ramen.name}">
         </div>
         <div class="rating"><p>${ramen.rating}</p></div>
         <div class="comment"><p>${ramen.comment}</p></div>`
   ))
 }
 displayRamen();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //let slideIndex = 1;
 //showSlides(slideIndex);
@@ -101,9 +51,3 @@ displayRamen();
   //slides[slideIndex-1].style.display = "block";  
   //dots[slideIndex-1].className += " active";
 //}
-
-//const ramens = [
-  //{ id: 1, name: "Shoyu Ramen", restaurant: "Ichiran", image: "shoyu.jpg", rating: 5, comment: "Delicious!" },
-  //{ id: 2, name: "Miso Ramen", restaurant: "Menya", image: "miso.jpg", rating: 4, comment: "Very flavorful!" },
-  //{ id: 3, name: "Tonkotsu Ramen", restaurant: "Ramen-ya", image: "tonkotsu.jpg" }
-//];
