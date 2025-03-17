@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rate Ramen</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -14,6 +14,7 @@
     <h1>Ramen Rater</h1>
   </nav>
   <br>
+  <!--Quick ramen diplay overview-->
   <section>
   <div class="ramen-display">
     <div>
@@ -33,6 +34,7 @@
     </div>
   </div>
   <br><br>
+  <!--container for detailed ramen look-->
   <div id="container">
     <div class="image">
       <div class="name">
@@ -50,70 +52,8 @@
       <p></p>
     </div>
   </div>
-  <br><br>
-
-  <!--slideshow container-->
-  <!--<div class="slideshow-container" id="slideshow-container"> -->
-  <!--Meal images with captions in ascending order-->
-
-  <!--
-
-    <div class="mySlides fade" id="mySlides">
-      <div class="numbertext">1/5</div>
-      <img src="./images/gyukotsu.jpg" alt="gyukotsu" width="100%">
-      <div class="text">Gyukotsu</div>
-    </div>
-    <div class="mySlides fade">
-      <div class="numbertext">2/5</div>
-      <img src="./images/kojiro.jpg" alt="kojiro" width="100%">
-      <div class="text">Kojiro</div>
-    </div>
-    <div class="mySlides fade">
-      <div class="numbertext">3/5</div>
-      <img src="./images/naruto.jpg" alt="naruto" width="100%">
-      <div class="text">Naruto</div>
-    </div>
-    <div class="mySlides fade">
-      <div class="number-ext">4/5</div>
-      <img src="./images/nirvana.jpg" alt="nirvana" width="100%">
-      <div class="text">Nirvana</div>
-    </div>
-    <div class="mySlides fade">
-      <div class="numbertext">5/5</div>
-      <img src="./images/shoyu.jpg" alt="shoyu" width="100%">
-      <div class="text">Shoyu</div>
-    </div>
-
-  -->
-
-  <!--next and previous buttons for the slideshow container-->
-
-  <!--
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
-
--->
-  <br>
-  <!--dots/circles for the carousel-->
-  <!--
-
-  <div style="text-align: center;">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-    <span class="dot" onclick="currentSlide(4)"></span>
-    <span class="dot" onclick="currentSlide(5)"></span>
-  </div>
-  <br><br>
-  <div class="rating">
-    <h3>Rating : <span><img src="./images/star.svg" alt=""></span><span><img src="./images/star.svg" alt=""><span><img
-            src="./images/star.svg" alt=""></span><span><img src="./images/star.svg" alt=""></span><span><img src="./images/star.svg" alt=""></span><span><img src="./images/star.svg" alt=""></span><span><img src="./images/star.svg" alt=""></span><span><img src="./images/star.svg" alt=""></span><span><img src="./images/star.svg" alt=""></span><span><img src="./images/star.svg" alt=""></span></h3>
-  </div>
-  <div class="comment-display"><h3>Comment:</h3></div> 
-  <br><br><b><br>
-
-  -->
+  <br><br><br>
+  <!--Form input to add new Ramen to Existing ones-->
   <form>
     <h1>Add New Ramen</h1>
 
@@ -131,12 +71,11 @@
     </label>
     <label for="comment" class="text-label">Comment:
       <textarea name="comment" id="comment" class="input-text"></textarea>
-      <!--<input type="text" name="comment" id="comment" class="input-text"> -->
     </label>
     <button type="submit" class="create">create</button>
   </form>
 </section>
-  <script src="./script.js"></script>
+  <script src="./javascript/script.js"></script>
 </body>
 
 </html>
