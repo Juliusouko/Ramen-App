@@ -3,21 +3,8 @@
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
-  /*background: linear-gradient(to right, antiquewhite,white); */
-}
 
-.mySlides {
-  display: none;
 }
-
-.slideshow-container > div > img {
-  vertical-align: middle;
-  height: 450px;
-  width: 800px;
-  border-radius: 5px;
-}
-
-/*  start of navbar style */
 .navbar {
   height: 25px;
   background-color: black;
@@ -27,102 +14,7 @@
   color: white;
 }
 
-/* end of navbar style */
 
-/* start of carousel-container */
-.slideshow-container {
-  max-width: 800px;
-  position: relative;
-  margin: auto;
-}
-
-/* hide images by default */
-
-/* next and previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: aliceblue;
-  font-size: 18px;
-  font-weight: bold;
-  transition: 0.8s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/5 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active,
-.dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {
-    opacity: .4
-  }
-
-  to {
-    opacity: 1
-  }
-}
-
-/* end of carousel-container styles */
-
-/* style for form input */
 
 form {
   border-radius: 5px;
@@ -161,7 +53,6 @@ form {
   text-align: center;
 }
 
-/* image styles */
 .ramen-display {
   display: flex;
   justify-content: space-evenly;
@@ -172,26 +63,14 @@ form {
   width: 160px;
   border-radius: 10px;
 }
-.rating {
-  display: flex;
-  justify-content: center;
-}
 
-.comment-display {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-/* add image gallarey that contains name, restaurant, image, rating, comment */
-/* Image gallery styles begin */
 .image {
-  max-width: 500px;
-  min-height: 300px;
+  max-width: 400px;
+  height: 300px;
   position: relative;
   margin: auto;
-  border: 1px solid silver;
   border-radius: 4px;
-  display: none;
+
 }
 
 .image > img {
@@ -199,28 +78,14 @@ form {
   height: 100%;
   border-radius: 8px;
 }
-.rating-new, .comment {
-  display: flex;
-  justify-content: center;
-}
 
-.restaurant, .name, .rating, .comment {
+.image > p {
   display: none;
-  padding: 10px;
-}
-
-.image:hover .name{
-  display: block;
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
   font-size: 24px;
-  padding: 20px;
-  text-align: center;
+  font-weight: 900;
 }
-
-/* Image gallery styles end */ 

@@ -7,47 +7,43 @@ const ramens = [
   { id: 5, name: "naruto", restaurant: "Hongkong", image: "naruto.jpg", rating: 4, comment: "nice food! i am proposing to the chef lady right away." },
 ];
 
-//create a diplay ramen function ()
+let ramenDetail = document.getElementById("ramen-display");
+ramenDetail.onclick = function() {
+  alert("You clicked on the ramen image");
+  let container = document.getElementById("image");
+  container.innerHTML = document.querySelector();
+
+  ramens.forEach((ramen) => {
+    let ramenImage = document.createElement("img");
+    img.src = ramen.image;
+    img.alt = ramen.name;
+    img.dataset.id = ramen.id;
+    
+    img.addevntListener("click", ramenDetail.onclick);
+    container.appendChild(ramenImage);
+  }
+  );
+};
+//create a display ramen function ()
 function displayRamen()  {
-  //console.log(ramens.length);
-  let ramenDetail = document.getElementById("container");
   ramenDetail.innerHTML = '';
   ramens.forEach((ramen) => (
     ramenDetail.innerHTML 
-    += `<div class="image">
-        <div class="name">${ramen.name}</div>  
-          <div class="restaurant">${ramen.restaurant}</div>
-          <img src="images/${ramen.image}" alt="${ramen.name}">
-        </div>
-        <div class="rating"><p>${ramen.rating}</p></div>
-        <div class="comment"><p>${ramen.comment}</p></div>`
-  ))
+    += `<div class="display">
+          <img src="./images/${ramen.image}" alt="${ramen.name}"
+          style="display: block; margin-left: auto; margin-right: auto;">
+        </div>`
+  ));    
 }
-displayRamen();
+//create a function to add a new ramen
+function addRamen() {
+  let name = document.getElementById("name").value;
+  let restaurant = document.getElementById("restaurant").value;
+  let image = document.getElementById("image").value;
+  let rating = document.getElementById("rating").value;
+  let comment = document.getElementById("comment").value;
 
-//let slideIndex = 1;
-//showSlides(slideIndex);
-
-//function plusSlides(n) {
-  //showSlides(slideIndex += n);
-//}
-
-//function currentSlide(n) {
-  //showSlides(slideIndex = n);
-//}
-
-//function showSlides(n) {
-  //let i;
-  //let slides = document.getElementsByClassName("mySlides");
-  //let dots = document.getElementsByClassName("dot");
-  //if (n > slides.length) {slideIndex = 1}    
-  //if (n < 1) {slideIndex = slides.length}
-  //for (i = 0; i < slides.length; i++) {
-    //slides[i].style.display = "none";  
-  //}
-  //for (i = 0; i < dots.length; i++) {
-    //dots[i].className = dots[i].className.replace(" active", "");
-  //}
-  //slides[slideIndex-1].style.display = "block";  
-  //dots[slideIndex-1].className += " active";
-//}
+  ramens.push({ id: ramens.length + 1, name, restaurant, image, rating, comment });
+  displayRamen();
+}
+addRamen(); 

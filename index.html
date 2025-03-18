@@ -15,127 +15,38 @@
   </nav>
   <br>
   <section>
-  <div class="ramen-display">
-    <div>
-      <img src="./images/gyukotsu.jpg" alt="gyukotsu">
-    </div>
-    <div>
-      <img src="./images/kojiro.jpg" alt="kojiro">
-    </div>
-    <div>
-      <img src="./images/naruto.jpg" alt="naruto">
-    </div>
-    <div>
-      <img src="./images/nirvana.jpg" alt="nirvana">
-    </div>
-    <div>
-      <img src="./images/shoyu.jpg" alt="shoyu">
-    </div>
-  </div>
-  <br><br>
-  <div id="container">
-    <div class="image">
-      <div class="name">
-      </div>
-      <div class="restaurant">
-      </div>
-    <img src="" alt="">
+    <div class="ramen-display" id="ramen-display">
     </div>
     <br>
-    <div class="rating">Rating: 
-      <p></p>
-    </div>
+    <div id="container">
+      <div class="image" id="image">
+        <p class="name"></p>
+        <img src="" alt="">
+      </div>
+    </div>  
     <br>
-    <div class="comment">Comment:
-      <p></p>
-    </div>
-  </div>
-  <br><br>
+    <br>
+    <form>
+      <h1>Add New Ramen</h1>
 
-  <!--slideshow container-->
-  <!--<div class="slideshow-container" id="slideshow-container"> -->
-  <!--Meal images with captions in ascending order-->
-
-  <!--
-
-    <div class="mySlides fade" id="mySlides">
-      <div class="numbertext">1/5</div>
-      <img src="./images/gyukotsu.jpg" alt="gyukotsu" width="100%">
-      <div class="text">Gyukotsu</div>
-    </div>
-    <div class="mySlides fade">
-      <div class="numbertext">2/5</div>
-      <img src="./images/kojiro.jpg" alt="kojiro" width="100%">
-      <div class="text">Kojiro</div>
-    </div>
-    <div class="mySlides fade">
-      <div class="numbertext">3/5</div>
-      <img src="./images/naruto.jpg" alt="naruto" width="100%">
-      <div class="text">Naruto</div>
-    </div>
-    <div class="mySlides fade">
-      <div class="number-ext">4/5</div>
-      <img src="./images/nirvana.jpg" alt="nirvana" width="100%">
-      <div class="text">Nirvana</div>
-    </div>
-    <div class="mySlides fade">
-      <div class="numbertext">5/5</div>
-      <img src="./images/shoyu.jpg" alt="shoyu" width="100%">
-      <div class="text">Shoyu</div>
-    </div>
-
-  -->
-
-  <!--next and previous buttons for the slideshow container-->
-
-  <!--
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
-
--->
-  <br>
-  <!--dots/circles for the carousel-->
-  <!--
-
-  <div style="text-align: center;">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-    <span class="dot" onclick="currentSlide(4)"></span>
-    <span class="dot" onclick="currentSlide(5)"></span>
-  </div>
-  <br><br>
-  <div class="rating">
-    <h3>Rating : <span><img src="./images/star.svg" alt=""></span><span><img src="./images/star.svg" alt=""><span><img
-            src="./images/star.svg" alt=""></span><span><img src="./images/star.svg" alt=""></span><span><img src="./images/star.svg" alt=""></span><span><img src="./images/star.svg" alt=""></span><span><img src="./images/star.svg" alt=""></span><span><img src="./images/star.svg" alt=""></span><span><img src="./images/star.svg" alt=""></span><span><img src="./images/star.svg" alt=""></span></h3>
-  </div>
-  <div class="comment-display"><h3>Comment:</h3></div> 
-  <br><br><b><br>
-
-  -->
-  <form>
-    <h1>Add New Ramen</h1>
-
-    <label for="name" class="text-label">Name:
-      <input type="text" name="name" id="name" class="input-text">
-    </label>
-    <label for="restaurant" class="text-label">Restaurant:
-      <input type="text" name="restaurant" id="restaurant" class="input-text">
-    </label>
-    <label for="image" class="text-label">Image:
-      <input type="text" name="image" id="image" class="input-text">
-    </label>
-    <label for="rating" class="text-label">Rating:
-      <input type="text" name="rating" id="rating" class="input-text">
-    </label>
-    <label for="comment" class="text-label">Comment:
-      <textarea name="comment" id="comment" class="input-text"></textarea>
-      <!--<input type="text" name="comment" id="comment" class="input-text"> -->
-    </label>
-    <button type="submit" class="create">create</button>
-  </form>
-</section>
+      <label for="name" class="text-label">Name:
+        <input type="text" name="name" id="name" class="input-text">
+      </label>
+      <label for="restaurant" class="text-label">Restaurant:
+        <input type="text" name="restaurant" id="restaurant" class="input-text">
+      </label>
+      <label for="image" class="text-label">Image:
+        <input type="text" name="image" id="image" class="input-text">
+      </label>
+      <label for="rating" class="text-label">Rating:
+        <input type="text" name="rating" id="rating" class="input-text">
+      </label>
+      <label for="comment" class="text-label">Comment:
+        <textarea name="comment" id="comment" class="input-text"></textarea>
+      </label>
+      <button type="submit" class="create">create</button>
+    </form>
+  </section>
   <script src="./script.js"></script>
 </body>
 
