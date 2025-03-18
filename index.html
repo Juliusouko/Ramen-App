@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rate Ramen</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -14,39 +14,53 @@
     <h1>Ramen Rater</h1>
   </nav>
   <br>
+  <!--Quick ramen diplay overview-->
   <section>
     <div class="ramen-display" id="ramen-display">
     </div>
-    <br>
-    <div id="container">
-      <div class="image" id="image">
-        <p class="name"></p>
-        <img src="" alt="">
+    <div>
+      <img src="./images/kojiro.jpg" alt="kojiro">
+    </div>
+    <div>
+      <img src="./images/naruto.jpg" alt="naruto">
+    </div>
+    <div>
+      <img src="./images/nirvana.jpg" alt="nirvana">
+    </div>
+    <div>
+      <img src="./images/shoyu.jpg" alt="shoyu">
+    </div>
+  </div>
+  <br><br>
+  <div id="container">
+    <div class="image">
+     <img src="" alt="">
       </div>
-    </div>  
-    <br>
-    <br>
-    <form>
-      <h1>Add New Ramen</h1>
+  </div>
+  <br><br>
 
-      <label for="name" class="text-label">Name:
-        <input type="text" name="name" id="name" class="input-text">
-      </label>
-      <label for="restaurant" class="text-label">Restaurant:
-        <input type="text" name="restaurant" id="restaurant" class="input-text">
-      </label>
-      <label for="image" class="text-label">Image:
-        <input type="text" name="image" id="image" class="input-text">
-      </label>
-      <label for="rating" class="text-label">Rating:
-        <input type="text" name="rating" id="rating" class="input-text">
-      </label>
-      <label for="comment" class="text-label">Comment:
-        <textarea name="comment" id="comment" class="input-text"></textarea>
-      </label>
-      <button type="submit" class="create">create</button>
-    </form>
-  </section>
+  <!--Form to add new ramen-->
+  <form>
+    <h1>Add New Ramen</h1>
+
+    <label for="name" class="text-label">Name:
+      <input type="text" name="name" id="name" class="input-text">
+    </label>
+    <label for="restaurant" class="text-label">Restaurant:
+      <input type="text" name="restaurant" id="restaurant" class="input-text">
+    </label>
+    <label for="image" class="text-label">Image:
+      <input type="text" name="image" id="image" class="input-text">
+    </label>
+    <label for="rating" class="text-label">Rating:
+      <input type="text" name="rating" id="rating" class="input-text">
+    </label>
+    <label for="comment" class="text-label">Comment:
+      <textarea name="comment" id="comment" class="input-text"></textarea>
+    </label>
+    <button type="submit" class="create">create</button>
+  </form>
+</section>
   <script src="./script.js"></script>
 </body>
 
