@@ -3,15 +3,27 @@
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
+  background: aliceblue;
 
 }
-.navbar {
+body > .navbar > h1{
   height: 25px;
   background-color: black;
   display: flex;
   justify-content: center;
   width: 100vw;
   color: white;
+}
+
+.ramen-display {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.ramen-display > div > img {
+  height: 120px;
+  width: 160px;
 }
 
 .image-slide {
@@ -39,7 +51,7 @@ img{
     right: 10px;
     bottom: 10px;
     width: 100%;
-    background: aliceblue;
+    background: antiquewhite;
     text-align: center;
 }
 
@@ -103,7 +115,6 @@ img{
 
 form {
   border-radius: 5px;
-  background-color: #f2f2f2;
   padding: 30px;
   display: grid;
   justify-content: center;
