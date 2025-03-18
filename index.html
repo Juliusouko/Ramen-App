@@ -9,101 +9,60 @@
 </head>
 
 <body>
-  <!--Navbar placholder-->
-  <nav class="navbar">
-    <h1>Ramen Rater</h1>
-  </nav>
-  <br>
-  <!--Quick ramen diplay overview-->
-  <section>
-    <div id="ramen-display" class="ramen-display">
-      <div class="ramen-list">
-        <img src="./images/gyukotsu.jpg" alt="gyukotsu">
-      </div>
-      <div class="ramen-list">
-        <img src="./images/kojiro.jpg" alt="kojiro">
-      </div>
-      <div class="ramen-list">
-        <img src="./images/naruto.jpg" alt="naruto">
-      </div>
-      <div class="ramen-list">
-        <img src="./images/nirvana.jpg" alt="nirvana">
-      </div>
-      <div class="ramen-list">
-        <img src="./images/shoyu.jpg" alt="">
-      </div>
-    </div>
-    <br><br>
-    <div class="container">
-      <div class="slide-image">
-        <img src="./images/gyukotsu.jpg" alt="gyukotsu" style="width: 100%;">
-        <div class="text">gyukotsu</div>
-        <div class="restaurant">Quiver-Grills</div>
-        <div class="rating">Rating: 7</div>
-        <div class="comment">Yeah! now this is good food, lets eat it.</div>
-      </div>
-      <div class="slide-image">
-        <img src="./images/kojiro.jpg" alt="kojiro" style="width: 100%;">
-        <div class="text">kojiro</div>
-        <div class="restaurant">Moringa Kitchen</div>
-        <div class="rating">Rating: 4 </div>
-        <div class="comment">Very flavourful, do you know anyone named Flavour ?</div>
-      </div>
-      <div class="slide-image">
-        <img src="./images/naruto.jpg" alt="" style="width: 100%;">
-        <div class="text">naruto</div>
-        <div class="restaurant">Soko-safi village</div>
-        <div class="rating">Rating: 6 </div>
-        <div class="comment">Nice food, could you come with more chapos!</div>
-      </div>
-      <div class="slide-image">
-        <img src="./images/nirvana.jpg" alt="nirvana" style="width: 100%;">
-        <div class="text">nirvana</div>
-        <div class="restaurant">KFC</div>
-        <div class="rating">Rating: 9 </div>
-        <div class="comment">The meal is delicious!</div>
-      </div>
-      <div class="slide-image">
-        <img src="./images/shoyu.jpg" alt="shoyu" style="width: 100%;">
-        <div class="text">shoyu</div>
-        <div class="restaurant">Downtown Hongkong</div>
-        <div class="rating">Rating: 5 </div>
-        <div class="comment">uum! This is the food for my life.</div>
-      </div>
-    </div>
-    <br>
-    <!--dots for the image-slide container-->
-    <div style="text-align: center">
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-    </div>
-    <br><br><br>
+  <header>
+    <nav class="navbar">
+      <h1>Ramen Rater</h1>
+    </nav>
+  </header>
 
-    <!--Form to add new ramen-->
-    <form>
-      <h1>Add New Ramen</h1>
+  <main>
+    <div id="ramen-menu"></div>
 
-      <label for="name" class="text-label">Name:
-        <input type="text" name="name" id="name" class="input-text">
-      </label>
-      <label for="restaurant" class="text-label">Restaurant:
-        <input type="text" name="restaurant" id="restaurant" class="input-text">
-      </label>
-      <label for="image" class="text-label">Image:
-        <input type="text" name="image" id="image" class="input-text">
-      </label>
-      <label for="rating" class="text-label">Rating:
-        <input type="text" name="rating" id="rating" class="input-text">
-      </label>
-      <label for="comment" class="text-label">Comment:
-        <textarea name="comment" id="comment" class="input-text"></textarea>
-      </label>
-      <button type="submit" class="create">create</button>
+    <div id="ramen-detail">
+      <div class="ramen-img">
+        <p class="ramen-name"></p>
+        <p class="ramen-restaurant"></p>
+      </div>
+
+      <div class="ramen-info">
+        <h2>Rating:</h2>
+        <p class="ramen-rating"></p>
+      </div>
+
+      <div class="ramen-info">
+        <h2>Comment</h2>
+        <p class="ramen-comment"></p>
+      </div>
+    </div>
+
+    <form class="form">
+      <div class="form-header">
+        <h2>Add New Ramen</h2>
+      </div>
+      <div class="form-control">
+        <label>Name </label>
+        <input type="text" name="name" id="name" />
+      </div>
+      <div class="form-control">
+        <label>Restaurant </label>
+        <input type="text" name="restaurant" id="restaurant" />
+      </div>
+      <div class="form-control">
+        <label>Image </label>
+        <input type="text" name="image" id="image" />
+      </div>
+      <div class="form-control">
+        <label>Rating </label>
+        <input type="text" name="rating" id="rating" />
+      </div>
+      <div class="form-control">
+        <label>Comment </label>
+        <textarea name="comment" id="comment"></textarea>
+      </div>
+
+      <button type="submit">Create</button>
     </form>
-  </section>
+  </main>
   <script src="./javascript/script.js"></script>
 </body>
 

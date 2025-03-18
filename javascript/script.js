@@ -1,63 +1,134 @@
+const ramenMenu = document.getElementById("ramen-menu");
+const ramenRating = document.querySelector(".ramen-rating");
+const ramenComment = document.querySelector(".ramen-comment");
+const ramenName = document.querySelector(".ramen-name");
+const ramenRestaurant = document.querySelector(".ramen-restaurant");
+const ramenImg = document.querySelector(".ramen-img");
+const form = document.querySelector(".form");
+
 const ramens = [
-  { id: 1, name: "Shoyu Ramen", restaurant: "Quiver-Grills", image: "shoyu.jpg", rating: 5, comment: "uum! this is the food for my life" },
-  { id: 2, name: "Kojiro Ramen", restaurant: "Moringa Kitchen", image: "kojiro.jpg", rating: 4, comment: "Very flavorful aroma in the food!" },
-  { id: 3, name: "Gyukotsu Ramen", restaurant: "Soko-safi village", image: "gyukotsu.jpg", rating: 7, comment: "yeah! now this is a meal" },
-  { id: 4, name: "Nirvana Ramen", restaurant: "KFC", image:
-  "nirvana.jpg", rating: 5, comment: "Delicious!" },
-  { id: 5, name: "naruto", restaurant: "Hongkong", image: "naruto.jpg", rating: 4, comment: "nice food! i am proposing to the chef lady right away." },
+  {
+    id: 1,
+    name: "Shoyu ramen",
+    restaurant: "Ichiran",
+    image: "../../images/gyukotsu.jpg",
+    rating: 5,
+    comment: "not my cup of tea",
+  },
+  {
+    id: 2,
+    name: "kojiro",
+    restaurant: "Menya",
+    image: "../../images/kojiro.jpg",
+    rating: 7,
+    comment: "savory",
+  },
+  {
+    id: 3,
+    name: "naruto",
+    restaurant: "Dalkokuya",
+    image: "../../images/naruto.jpg",
+    rating: 6,
+    comment: "very tasty",
+  },
+  {
+    id: 4,
+    name: "nirvana",
+    restaurant: "Shin-Sen-Gumi",
+    image: "../../images/nirvana.jpg",
+    rating: 9,
+    comment: "love the vegetables",
+  },
+    {
+       id: 5,
+       name: "shoyu",
+       restaurant: "Ramen Nagi",
+       image: "../../images/shoyu.jpg",
+       rating: 3,
+       comment: "very plain",
+     },
 ];
 
-//create a display ramen function ()
-function displayRamen()  {
-  
+function displayRamens() {
+  ramens.forEach((ramen) => {
+    const imgElement = document.createElement("img");
+    imgElement.src = ramen.image;
+    imgElement.classList.add("img-menu");
+    imgElement.onclick = () => handleClick(ramen.image);
+    ramenMenu.appendChild(imgElement);
+  });
 }
-//create a function to add a new ramen
-function addRamen() {
-  let name = document.getElementById("name").value;
-  let restaurant = document.getElementById("restaurant").value;
-  let image = document.getElementById("image").value;
-  let rating = document.getElementById("rating").value;
-  let comment = document.getElementById("comment").value;
 
-  ramens.push({ id: ramens.length + 1, name, restaurant, image, rating, comment });
-  displayRamen();
+function handleClick(imageSrc) {
+  const imgMenu = document.querySelector(".img-menu"); // Class (Selected image)
+
+  if (!imgMenu) {
+    console.error(
+      "imgMenu not found. Make sure your HTML has an element with class 'img-menu'."
+    );
+    return;
+  }
+
+  imgMenu.src = imageSrc; // Set selected image
+
+  // Find the selected ramen
+  const selectedRamen = ramens.find((ramen) => ramen.image === imageSrc);
+
+  if (selectedRamen) {
+    ramenName.textContent = selectedRamen.name;
+    ramenRestaurant.textContent = selectedRamen.restaurant;
+    ramenImg.style.backgroundImage = `url('${selectedRamen.image}')`;
+    ramenRating.textContent = selectedRamen.rating;
+    ramenComment.textContent = selectedRamen.comment;
+  }
 }
-addRamen(); 
 
-let slideIndex = 0;
-showSlides(); // call showslide method
+function addSubmitListener() {
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent page reload
 
-function showSlides() {
-    let i;
+    // Get user input values
+    const name = document.getElementById("name").value;
+    const restaurant = document.getElementById("restaurant").value;
+    const image = document.getElementById("image").value;
+    const rating = document.getElementById("rating").value;
+    const comment = document.getElementById("comment").value;
 
-    // get the array of divs' with classname image-sliderfade
-    let slides = document.getElementsByClassName("slide-image");
-    
-    // get the array of divs' with classname dot
-    let dots = document.getElementsByClassName("dot");
-
-    for (i = 0; i < slides.length; i++) {
-        // initially set the display to
-        // none for every image.
-        slides[i].style.display = "none";
+    if (!name || !restaurant || !image || !rating || !comment) {
+      alert("Please fill in all fields.");
+      return;
     }
 
-    // increase by 1, Global variable
-    slideIndex++;
+    // Create new ramen object
+    const newRamen = {
+      name,
+      restaurant,
+      image,
+      rating: parseInt(rating),
+      comment,
+    };
 
-    // check for boundary
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
-    }
+    // Add new image to ramen menu
+    const imgElement = document.createElement("img");
+    imgElement.src = newRamen.image;
+    imgElement.classList.add("img-menu");
+    imgElement.onclick = () => handleClick(newRamen.image);
+    ramenMenu.appendChild(imgElement);
 
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex -1].className += " active";
-
-    // Change image every 2 seconds
-    setTimeout(showSlides, 8000);
+    // Clear form inputs
+    form.reset();
+  });
 }
+
+function main() {
+  addSubmitListener();
+  displayRamens();
+
+  if (ramens.length > 0) {
+    handleClick(ramens[0].image);
+  }
+}
+
+main();
+
 
